@@ -1,0 +1,123 @@
+<script setup>
+const {profile } = await useProfile()
+</script>
+
+<template>
+  <div>
+
+    نشون دادن نام و شغل
+    <h1>{{ profile.name }}</h1>
+    <h2>{{ profile.job }}</h2>
+
+    <h3>Skills</h3>
+
+    افزدون کامپوننت مهارت ها
+
+        <SkillCard
+        v-for="skill in profile.skills"
+        :key="skill"
+        :skill="skill"
+        />
+
+    <h3>Projects</h3>
+
+
+     اد کردن کامپوننت کارت پروژه ها
+    <ProjectCard
+      v-for="project in profile.projects"
+      :key="project.id"
+      :project="project"
+    />
+
+
+  </div>
+</template>
+
+<script setup>
+
+const { data: profile } = await useFetch("/api/profile");
+
+import { Icon } from '@iconify/vue'
+import ProjectCard from '~/components/projectCard.vue';
+</script>
+
+<template>
+  <main
+    class="min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors duration-500"
+>
+   
+  <section
+  class="relative flex min-h-screen items-center justify-center
+         overflow-hidden"
+>
+  <!-- عکس -->
+  <div
+    class="absolute inset-0 scale-105  
+           bg-[url('/images/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg')]
+           bg-cover bg-center bg-no-repeat
+           blur-sm"
+  ></div>
+  <div
+  class="absolute inset-0 z-0
+         bg-white/60
+         dark:bg-black/10"
+></div>
+      <div class="w-full text-center relative z-10 ">
+        <!-- Status -->
+       
+
+        <!-- Social Icons -->
+
+        <SocialIcon />
+
+        <!-- Name -->
+        <h1 class="text-5xl font-black tracking-tight sm:text-6xl md:text-7xl">
+          سلام من
+
+          <span class="mt-3 block">
+            {{ profile.name }}
+            هستم
+          </span>
+        </h1>
+
+        <!-- Job -->
+        <p
+          class="mt-6 text-xl font-semibold text-black/60 dark:text-white/60 sm:text-2xl"
+        >
+          {{ profile.job }}
+        </p>
+
+        <p
+          class="mt-3 text-xl font-semibold text-black/60 dark:text-white/60 sm:text-lg"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+          consequatur aspernatur incidunt distinctio. Dolorem, unde amet libero
+          debitis sed iste tenetur repellendus error, assumenda distinctio
+          dolorum architecto? Adipisci, enim aspernatur!
+        </p>
+
+        <!-- Buttons -->
+        <div
+          class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+        >
+          <NuxtLink
+            to="/projects"
+            class="rounded-xl bg-black px-7 py-3.5 text-sm font-medium text-white shadow-[0_10px_45px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(0,0,0,0.35)] dark:bg-white dark:text-black dark:shadow-[0_10px_45px_rgba(255,255,255,0.15)] dark:hover:shadow-[0_18px_65px_rgba(255,255,255,0.25)]"
+          >
+            مشاهده پروژه‌ها
+          </NuxtLink>
+
+          <NuxtLink
+            to="/contact"
+            class="rounded-xl border border-black/10 px-7 py-3.5 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white dark:border-white/10 dark:hover:bg-white dark:hover:text-black"
+          >
+            تماس با من
+          </NuxtLink>
+        </div>
+        
+      </div>
+    </section>
+   <SkillCard/>
+   <ProjectCard/>
+  </main>
+</template>
