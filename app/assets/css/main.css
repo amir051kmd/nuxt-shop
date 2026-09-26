@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @font-face {
-    font-family: Vazirmatn;
-    src: url(//public/fonts/fonts/ttf/Vazirmatn-Medium.ttf);
+  font-family: Dana;
+  src: url(fonts/Dana/dana-bold.woff) format("woff");
+}
+body{
+  font-family: Dana !important
 }

@@ -1,12 +1,9 @@
 <script setup>
-const { darkMode } = useTheme()
+const { darkMode } = useTheme();
 </script>
 
 <template>
-  <div
-    :class="{ dark: darkMode }"
-    class="min-h-screen"
-  >
+  <div :class="{ dark: darkMode }" class="min-h-screen">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
