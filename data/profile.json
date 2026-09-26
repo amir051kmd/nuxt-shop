@@ -38,27 +38,27 @@
   "projects" : [
     {
         "id" : 1 , 
-        "name" : "Weather App",
+        "name" : "سایت سنجش آب و هوا",
         "tech" : "Vue"
     },
     {
         "id" : 2 , 
-        "name" : "Todo App",
+        "name" : "سایت مدیریت وظایف",
         "tech" : "Nuxt , TS"
     },
     {
         "id" : 3 , 
-        "name" : "Tesma App",
+        "name" : "سامانه تسما",
         "tech" : "Angular,Prime NG"
     },
     {
         "id" : 4 , 
-        "name" : "Portfolio",
+        "name" : "سایت نمونه کار ها",
         "tech" : "Nuxt"
     },
     {
         "id" : 5 , 
-        "name" : "CV Site",
+        "name" : "سایت رزومه",
         "tech" : "Js"
     }
   ]

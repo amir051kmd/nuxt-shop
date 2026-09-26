@@ -2,6 +2,12 @@
 import { ref, onMounted } from 'vue'
 import { Icon } from '@iconify/vue'
 
+
+
+
+
+
+
 const menuOpen = ref(false)
 
 const toggleMenu = () => {
@@ -9,11 +15,8 @@ const toggleMenu = () => {
 }
 
 // Theme
-const { darkMode, toggleTheme, loadTheme } = useTheme()
+const { darkMode, toggleTheme } = useTheme()
 
-onMounted(() => {
-  loadTheme()
-})
 </script>
 
 <template>
@@ -76,7 +79,19 @@ onMounted(() => {
 
 
        
-
+   <NuxtLink
+          to="/contact"
+          class="rounded-lg px-4 py-2 text-sm font-medium
+                 text-black/50
+                 transition-all duration-300
+                 hover:bg-black/5
+                 hover:text-black
+                 dark:text-white/60
+                 dark:hover:bg-white/10
+                 dark:hover:text-white"
+        >
+          تماس
+        </NuxtLink>
         <NuxtLink
           to="/projects"
           class="rounded-lg px-4 py-2 text-sm font-medium
@@ -92,19 +107,7 @@ onMounted(() => {
         </NuxtLink>
 
 
-        <NuxtLink
-          to="/contact"
-          class="rounded-lg px-4 py-2 text-sm font-medium
-                 text-black/50
-                 transition-all duration-300
-                 hover:bg-black/5
-                 hover:text-black
-                 dark:text-white/60
-                 dark:hover:bg-white/10
-                 dark:hover:text-white"
-        >
-          تماس
-        </NuxtLink>
+     
          <NuxtLink
           to="/about"
           class="rounded-lg px-4 py-2 text-sm font-medium

@@ -1,34 +1,22 @@
 export const useTheme = () => {
+  const theme = useCookie("theme", {
+    default: () => "light",
+  })
 
-  const darkMode = useState('darkMode', () => false)
+  const darkMode = computed(() => {
+    return theme.value === "dark"
+  })
 
-  const loadTheme = () => {
-
-    const savedTheme = localStorage.getItem('theme')
-
-    if (savedTheme === 'dark') {
-      darkMode.value = true
+  function toggleTheme() {
+    if (theme.value === "dark") {
+      theme.value = "light"
     } else {
-      darkMode.value = false
+      theme.value = "dark"
     }
-
-  }
-
-  const toggleTheme = () => {
-
-    darkMode.value = !darkMode.value
-
-    localStorage.setItem(
-      'theme',
-      darkMode.value ? 'dark' : 'light'
-    )
-
   }
 
   return {
     darkMode,
     toggleTheme,
-    loadTheme
   }
-
 }

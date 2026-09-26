@@ -188,56 +188,7 @@ import SocialIcon from './socialIcon.vue';
     </div>
 
 
-    <!-- CTA -->
-    <div class="mx-auto max-w-6xl px-6">
-
-      <div
-        class="flex flex-col items-start
-               justify-between gap-6
-               rounded-3xl
-               border border-black/10
-               bg-black p-8
-               text-white
-               md:flex-row md:items-center
-               dark:border-white/10
-               dark:bg-white
-               dark:text-black"
-      >
-
-        <div>
-
-          <p class="text-2xl font-bold">
-            پروژه‌ای در ذهن داری؟
-          </p>
-
-          <p
-            class="mt-2 text-sm
-                   text-white/60
-                   dark:text-black/60"
-          >
-            بیایید با هم ایده‌ات را به یک پروژه واقعی تبدیل کنیم.
-          </p>
-
-        </div>
-
-        <a
-          href="mailto:amir@example.com"
-          class="shrink-0 rounded-xl
-                 bg-white px-6 py-3
-                 text-sm font-medium
-                 text-black
-                 transition hover:-translate-y-1
-                 hover:bg-white/90
-                 dark:bg-black
-                 dark:text-white
-                 dark:hover:bg-black/90"
-        >
-          شروع همکاری →
-        </a>
-
-      </div>
-
-    </div>
+   
 
 
     <!-- پایین Footer -->
