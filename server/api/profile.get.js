@@ -1,5 +1,5 @@
-import profile from '../../data/profile.json'
+import products from '../../data/products.json'
 
 export default defineEventHandler(() => {
-  return profile
+  return products
 })

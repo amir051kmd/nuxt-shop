@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "گلدار بنفش",
+      "material": "کریستال",
+      "color": "سبز",
+      "beads": 100,
+      "price": 2850000,
+      "stock": true,
+      "badge": "پرفروش",
+      "image": "/images/tsbih pics/IMG_20251027_144814.jpg"
+    },
+    {
+      "id": 2,
+      "name": "گلدار سبز",
+      "category": "",
+      "material": "کریستال",
+      "color": "سبز",
+      "beads": 101,
+      "price": 1950000,
+      "stock": true,
+      "badge": "",
+      "image": "/images/tsbih pics/IMG_20251027_145500.jpg"
+    },
+    {
+      "id": 3,
+      "name": "گلدار سفید",
+      "category": "",
+      "material": "مروارید",
+      "color": "سفید",
+      "beads": 33,
+      "price": 1450000,
+      "stock": true,
+      "badge": "اقتصادی",
+      "image": "/images/tsbih pics/IMG_20251027_145551.jpg"
+    },
+    {
+      "id": 4,
+      "name": "گلدار صورتی",
+      "category": "",
+      "material": "کریستال",
+      "color": "طلایی",
+      "beads": 101,
+      "price": 3450000,
+      "stock": true,
+      "badge": "",
+      "image": "/images/tsbih pics/IMG_20251027_145704.jpg"
+    },
+    {
+      "id": 5,
+      "name": "گلدار قهوه ای",
+      "category": "",
+      "material": "کریستال",
+      "color": "قهوه ای",
+      "beads": 101,
+      "price": 2350000,
+      "stock": true,
+      "badge": "",
+      "image": "/images/tsbih pics/IMG_20251027_145729.jpg"
+    },
+    {
+      "id": 6,
+      "name": "گلدار خاکستری",
+      "category": "",
+      "material": "کریستال",
+      "color": "خاکستری",
+      "beads": 33,
+      "price": 1750000,
+      "stock": true,
+      "badge": "جدید",
+      "image": "/images/tsbih pics/IMG_20251027_145842.jpg"
+    },
+    {
+      "id": 7,
+      "name": "گلدار آبی",
+      "category": "",
+      "material": "کریستال",
+      "color": "آبی",
+      "beads": 101,
+      "price": 2150000,
+      "stock": false,
+      "badge": "",
+      "image": "images/tsbih pics/IMG_20251027_150024.jpg"
+    },
+    {
+      "id": 8,
+      "name": "گلدار سبز",
+      "category": "",
+      "material": "مروارید",
+      "color": "سبز",
+      "beads": 101,
+      "price": 3250000,
+      "stock": true,
+      "badge": "ویژه",
+      "image": "/images/tsbih pics/IMG_20251027_150641.jpg"
+    }
+  ]
+}

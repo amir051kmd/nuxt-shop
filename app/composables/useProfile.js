@@ -1,7 +1,7 @@
 export const useProfile = async () => {
-  const { data: profile } = await useFetch('/api/profile')
+  const { data: products } = await useFetch('/api/products')
 
   return {
-    profile
+    products
   }
 }

@@ -1,8 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @font-face {
-  font-family: Dana;
-  src: url(fonts/Dana/dana-bold.woff) format("woff");
+  font-family: "Dana";
+  src: url("/fonts/Dana/dana-bold.woff") format("woff");
+  /* font-weight: 700;
+  font-style: normal; */
 }
 body{
   font-family: Dana !important
