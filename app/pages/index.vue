@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from "vue";
-import productsData from "../data/products.json";
+import productsData from "~~/data/products.json";
 
 /* ================= CONTACT INFO ================= */
 
@@ -132,7 +132,7 @@ const getEtaLink = (product) => {
             :href="etaLink"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-xl bg-[#C9A227] px-5 py-2.5 text-sm font-black text-[#17221B] shadow-md transition-all hover:bg-[#B28D1D] hover:shadow-lg"
+            class="rounded-xl bg-[#C9A227] px-5 py-2.5 text-sm font-black text-[#17221B] shadow-md transition-colors hover:bg-[#B28D1D] hover:shadow-lg"
           >
             سفارش در ایتا
           </a>
@@ -146,7 +146,7 @@ const getEtaLink = (product) => {
           :href="etaLink"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 rounded-xl bg-[#0F5132] px-4 py-2.5 text-xs font-bold text-white shadow-md transition-all active:scale-95 md:hidden"
+          class="flex items-center gap-2 rounded-xl bg-[#0F5132] px-4 py-2.5 text-xs font-bold text-white shadow-md transition-colors active:scale-95 md:hidden"
         >
           <span>
             سفارش در ایتا
@@ -248,7 +248,7 @@ const getEtaLink = (product) => {
 
             <a
               href="#products"
-              class="rounded-2xl bg-[#0F5132] px-7 py-3.5 text-center text-sm font-black text-white shadow-[0_8px_25px_rgba(15,81,50,0.2)] transition-all hover:-translate-y-0.5 hover:bg-[#0B4027]"
+              class="rounded-2xl bg-[#0F5132] px-7 py-3.5 text-center text-sm font-black text-white shadow-[0_8px_25px_rgba(15,81,50,0.2)] transition-colors hover:bg-[#0B4027]"
             >
               مشاهده تسبیح‌ها
             </a>
@@ -258,7 +258,7 @@ const getEtaLink = (product) => {
               :href="etaLink"
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-2xl border border-[#C9A227] bg-white px-7 py-3.5 text-center text-sm font-black text-[#8A6A00] transition-all hover:bg-[#FFF9E6]"
+              class="rounded-2xl border border-[#C9A227] bg-white px-7 py-3.5 text-center text-sm font-black text-[#8A6A00] transition-colors hover:bg-[#FFF9E6]"
             >
               ثبت سفارش در ایتا
             </a>
@@ -400,7 +400,7 @@ const getEtaLink = (product) => {
               v-model="search"
               type="text"
               placeholder="جستجو بر اساس نام، رنگ یا جنس تسبیح گلدار..."
-              class="w-full rounded-2xl border border-[#E2DDCF] bg-[#FAF8F2] px-5 py-4 text-sm text-[#17221B] outline-none transition-all placeholder:text-[#9AA19B] focus:border-[#0F5132] focus:bg-white focus:ring-4 focus:ring-[#0F5132]/10"
+              class="w-full rounded-2xl border border-[#E2DDCF] bg-[#FAF8F2] px-5 py-4 text-sm text-[#17221B] outline-none transition-colors placeholder:text-[#9AA19B] focus:border-[#0F5132] focus:bg-white focus:ring-4 focus:ring-[#0F5132]/10"
             />
 
             <span
@@ -424,7 +424,7 @@ const getEtaLink = (product) => {
             v-for="material in materials"
     :key="material"
     @click="selectedMaterial = material"
-    class="shrink-0 rounded-full px-5 py-2.5 text-xs font-black transition-all"
+    class="shrink-0 rounded-full px-5 py-2.5 text-xs font-black transition-colors"
     :class="
       selectedMaterial === material
         ? 'bg-[#0F5132] text-white shadow-lg shadow-[#0F5132]/15'
@@ -445,9 +445,10 @@ const getEtaLink = (product) => {
         >
 
           <ProductCard
-            v-for="product in filteredProducts"
+            v-for="(product, index) in filteredProducts"
             :key="product.id"
             :product="product"
+            :eager="index < 4"
           />
 
         </div>
@@ -522,7 +523,7 @@ const getEtaLink = (product) => {
             :href="etaLink"
             target="_blank"
             rel="noopener noreferrer"
-            class="group rounded-3xl border border-[#DDE5DE] bg-white p-6 shadow-[0_8px_30px_rgba(15,81,50,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0F5132]/30 hover:shadow-[0_18px_45px_rgba(15,81,50,0.12)]"
+            class="group rounded-3xl border border-[#DDE5DE] bg-white p-6 shadow-[0_8px_30px_rgba(15,81,50,0.06)] transition-colors duration-200 hover:border-[#0F5132]/30 hover:shadow-[0_18px_45px_rgba(15,81,50,0.12)]"
           >
 
             <div
@@ -552,7 +553,7 @@ const getEtaLink = (product) => {
 
           <a
             :href="phoneLink"
-            class="group rounded-3xl border border-[#DDE5DE] bg-white p-6 shadow-[0_8px_30px_rgba(15,81,50,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A227]/40 hover:shadow-[0_18px_45px_rgba(15,81,50,0.12)]"
+            class="group rounded-3xl border border-[#DDE5DE] bg-white p-6 shadow-[0_8px_30px_rgba(15,81,50,0.06)] transition-colors duration-200 hover:border-[#C9A227]/40 hover:shadow-[0_18px_45px_rgba(15,81,50,0.12)]"
           >
 
             <div
@@ -643,7 +644,7 @@ const getEtaLink = (product) => {
               :href="etaLink"
               target="_blank"
               rel="noopener noreferrer"
-              class="shrink-0 rounded-2xl bg-[#C9A227] px-7 py-4 text-sm font-black text-[#17221B] shadow-xl transition-all hover:-translate-y-0.5 hover:bg-[#E0BE38]"
+              class="shrink-0 rounded-2xl bg-[#C9A227] px-7 py-4 text-sm font-black text-[#17221B] shadow-xl transition-colors hover:bg-[#E0BE38]"
             >
               سفارش در ایتا
             </a>

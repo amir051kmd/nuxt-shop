@@ -1,11 +1,33 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
   font-family: "Dana";
-  src: url("/fonts/Dana/dana-bold.woff") format("woff");
-  /* font-weight: 700;
-  font-style: normal; */
+  src: url("/fonts/Dana/dana-bold.woff2") format("woff2"),
+       url("/fonts/Dana/dana-bold.woff") format("woff");
+  font-display: swap;
 }
-body{
-  font-family: Dana !important
+
+body {
+  font-family: Dana, Tahoma, sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* the sticky header must not cover the section titles */
+}
+
+/* the "scrollbar-hide" class used for the category chips does not exist in Tailwind v4 */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* cards that are far from the screen are not rendered until the user gets near them */
+.product-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 520px;
 }

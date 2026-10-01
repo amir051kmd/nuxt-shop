@@ -6,6 +6,11 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  // first cards (above the fold) are loaded immediately, the rest lazily
+  eager: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const phoneNumber = "09XXXXXXXXX";
@@ -23,7 +28,7 @@ const smsLink = computed(() => {
 
 <template>
   <article
-    class="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#E7DFCC] bg-white shadow-[0_8px_30px_rgba(15,81,50,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A227]/50 hover:shadow-[0_18px_45px_rgba(15,81,50,0.14)]"
+    class="product-card group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#E7DFCC] bg-white shadow-[0_6px_20px_rgba(15,81,50,0.07)] transition-colors duration-200 hover:border-[#C9A227]/60"
   >
     <!-- Image -->
     <div
@@ -32,7 +37,12 @@ const smsLink = computed(() => {
       <img
         :src="product.image"
         :alt="product.name"
-        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        width="720"
+        height="720"
+        :loading="eager ? 'eager' : 'lazy'"
+        :fetchpriority="eager ? 'high' : 'auto'"
+        decoding="async"
+        class="h-full w-full object-cover"
       />
 
       <!-- Image Overlay -->
@@ -126,7 +136,7 @@ const smsLink = computed(() => {
       <a
         v-if="product.stock"
         :href="smsLink"
-        class="flex items-center justify-center gap-2 rounded-2xl bg-[#0F5132] px-4 py-3 text-sm font-bold text-white shadow-[0_6px_18px_rgba(15,81,50,0.18)] transition-all duration-300 hover:bg-[#0B4027] hover:shadow-[0_8px_24px_rgba(15,81,50,0.25)] active:scale-[0.98]"
+        class="flex items-center justify-center gap-2 rounded-2xl bg-[#0F5132] px-4 py-3 text-sm font-bold text-white shadow-[0_6px_18px_rgba(15,81,50,0.18)] transition-colors duration-200 hover:bg-[#0B4027]"
       >
         <span>استعلام و سفارش</span>
 

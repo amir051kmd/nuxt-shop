@@ -9,7 +9,7 @@
       "price": 2850000,
       "stock": true,
       "badge": "پرفروش",
-      "image": "/images/tsbih pics/IMG_20251027_144814.jpg"
+      "image": "/images/products/product-1.webp"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "price": 1950000,
       "stock": true,
       "badge": "",
-      "image": "/images/tsbih pics/IMG_20251027_145500.jpg"
+      "image": "/images/products/product-2.webp"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "price": 1450000,
       "stock": true,
       "badge": "اقتصادی",
-      "image": "/images/tsbih pics/IMG_20251027_145551.jpg"
+      "image": "/images/products/product-3.webp"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "price": 3450000,
       "stock": true,
       "badge": "",
-      "image": "/images/tsbih pics/IMG_20251027_145704.jpg"
+      "image": "/images/products/product-4.webp"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "price": 2350000,
       "stock": true,
       "badge": "",
-      "image": "/images/tsbih pics/IMG_20251027_145729.jpg"
+      "image": "/images/products/product-5.webp"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "price": 1750000,
       "stock": true,
       "badge": "جدید",
-      "image": "/images/tsbih pics/IMG_20251027_145842.jpg"
+      "image": "/images/products/product-6.webp"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "price": 2150000,
       "stock": false,
       "badge": "",
-      "image": "images/tsbih pics/IMG_20251027_150024.jpg"
+      "image": "/images/products/product-7.webp"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "price": 3250000,
       "stock": true,
       "badge": "ویژه",
-      "image": "/images/tsbih pics/IMG_20251027_150641.jpg"
+      "image": "/images/products/product-8.webp"
     }
   ]
 }
